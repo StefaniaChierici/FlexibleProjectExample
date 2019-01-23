@@ -67,6 +67,16 @@ This connects a client that pings the `HelloWorker` and `DiceWorker` every few s
 ## Logs location
 The logs are stored in `logs` subdirectory of the location where your `spatialos.json` file is. For example, if my `spatialos.json` file is in `/workspace/project/SpatialOS`, the SpatialOS logs will go to `/workspace/project/SpatialOS/logs`.
 
+## Known Issues
+* `spatial local worker launch` is not supported.
+* `spatial project history snapshot convert` is not supported.
+* For [client workers](docs/reference/client-worker-configuration.md), it is currently not possible to specify the base command and command line arguments, with which a worker is started.
+* [Client workers](docs/reference/client-worker-configuration.md) that are not built using Unity or Unreal, while supported by the flexible project structure in general, are not supported by our [Launcher](https://docs.improbable.io/reference/latest/shared/operate/launcher#the-launcher) yet. As a result, you will not be able to start the client worker provided in this repository from the Launcher, if you deploy this project in the cloud.
+
+## Changelog
+
+Changes to this repository are documented [here](docs/changelog.md).
+
 ## Reference documentation
 
 [Main project configuration](docs/reference/project-configuration.md)
